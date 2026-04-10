@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DirectBlink Pitch</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#0b0f19; color:#fff; }
+    .slide { height:100vh; padding:60px; display:flex; flex-direction:column; justify-content:center; }
+    h1 { font-size:48px; margin-bottom:20px; }
+    h2 { font-size:36px; margin-bottom:20px; }
+    p, li { font-size:20px; line-height:1.6; }
+    .mock { background:#1a1f2e; padding:20px; border-radius:12px; width:300px; }
+    .btn { background:#2563eb; padding:12px; border-radius:8px; text-align:center; margin-top:10px; }
+    .nav { position:fixed; bottom:20px; right:20px; }
+    button { padding:10px 16px; margin:5px; }
+  </style>
+</head>
+<body>
+
+<div class="slide" id="s1">
+  <h1>DirectBlink</h1>
+  <p>O Checkout de um clique onde a atenção acontece</p>
+  <p>Transformando redes sociais em vitrines transacionais nativas com Solana Actions</p>
+  <div class="mock">
+    <p>@user: Novo produto 🚀</p>
+    <div class="btn">Comprar agora - 5 USDC</div>
+  </div>
+</div>
+
+<div class="slide" id="s2">
+  <h2>O Problema</h2>
+  <ul>
+    <li>5 a 7 etapas para converter um cliente</li>
+    <li>75% abandono de carrinho mobile</li>
+    <li>Usuário sai da rede social</li>
+  </ul>
+</div>
+
+<div class="slide" id="s3">
+  <h2>A Solução</h2>
+  <p>Transforme links em checkouts nativos (Blinks)</p>
+  <p>Compra direto no feed</p>
+</div>
+
+<div class="slide" id="s4">
+  <h2>Como Funciona</h2>
+  <ul>
+    <li>Define produto</li>
+    <li>Gera Action URL</li>
+    <li>Vira Blink</li>
+    <li>Pagamento via Solana Pay</li>
+  </ul>
+</div>
+
+<div class="slide" id="s5">
+  <h2>Fit com Solana</h2>
+  <ul>
+    <li>Confirmação < 400ms</li>
+    <li>Taxas baixas</li>
+    <li>Actions & Blinks</li>
+  </ul>
+</div>
+
+<div class="slide" id="s6">
+  <h2>Aplicação Técnica</h2>
+  <ul>
+    <li>Solana Pay SDK</li>
+    <li>Helio API</li>
+    <li>Token Extensions + cNFT</li>
+  </ul>
+</div>
+
+<div class="slide" id="s7">
+  <h2>Mercado</h2>
+  <ul>
+    <li>Infoprodutores</li>
+    <li>Creators</li>
+    <li>Social Commerce $1.2T</li>
+  </ul>
+</div>
+
+<div class="slide" id="s8">
+  <h2>Modelo de Negócio</h2>
+  <ul>
+    <li>Freemium</li>
+    <li>0.75% por transação</li>
+    <li>White-label</li>
+  </ul>
+</div>
+
+<div class="slide" id="s9">
+  <h2>Diferenciais</h2>
+  <ul>
+    <li>Zero fricção</li>
+    <li>Segurança</li>
+    <li>Mobile-first</li>
+  </ul>
+</div>
+
+<div class="slide" id="s10">
+  <h2>Time & Visão</h2>
+  <p>Dev Full-stack 7+ anos (React/Node)</p>
+  <p>Visão: tornar economia on-chain invisível</p>
+</div>
+
+<div class="nav">
+  <button onclick="prev()">◀</button>
+  <button onclick="next()">▶</button>
+</div>
+
+<script>
+let current = 0;
+const slides = document.querySelectorAll('.slide');
+function show(i){
+  slides.forEach((s,idx)=> s.style.display = idx===i ? 'flex':'none');
+}
+function next(){ current = (current+1)%slides.length; show(current);} 
+function prev(){ current = (current-1+slides.length)%slides.length; show(current);} 
+show(0);
+</script>
+
+</body>
+</html>
